@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout 
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	>
+	<ImageView
+		android:src="@drawable/Wallpaper"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:scaleType="centerCrop"
+		/>
+	<LinearLayout
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    >
+		<!-- Start of deadspace creation, place in linear flow -->
+		<TableLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<TableRow><ImageView android:layout_height="15px"></ImageView></TableRow>
+		</TableLayout>
+		<!-- end of deadspace creation -->
+		<Button  
+		    android:id="@+id/createDataButton"
+		    android:layout_width="fill_parent" 
+		    android:layout_height="wrap_content" 
+		    android:text="Create Data"
+		    />
+		<FrameLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:background="#FFFFFFFF"
+			>
+			<LinearLayout
+			    android:orientation="vertical"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+				>
+				<ImageView
+					android:src="@drawable/warningicon"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:scaleType="centerCrop"
+					android:layout_gravity="center"
+					/>
+				<TextView
+					android:text="No Data Available"
+					android:textColor="#000"
+					android:gravity="center"	
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"	
+				/>
+				<!-- Start of deadspace creation, place in linear flow -->
+				<TableLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+					<TableRow><ImageView android:layout_height="15px"></ImageView></TableRow>
+				</TableLayout>
+				<!-- end of deadspace creation -->
+			</LinearLayout>
+		</FrameLayout>
+	</LinearLayout>
+</FrameLayout>
+	

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7F260155-21F6-402C-AD0A-434F84C8882E}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ExampleApp.Droid</RootNamespace>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AssemblyName>ExampleAppForDroid</AssemblyName>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG; DIALOG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MainReceiver.cs" />
+    <Compile Include="Views\WelcomeScreenView.cs" />
+    <Compile Include="Views\DashboardView.cs" />
+    <Compile Include="Views\GenericDashboardView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable\Icon.png" />
+    <AndroidResource Include="Resources\layout\Splash.axml" />
+    <AndroidResource Include="Resources\drawable\splash.png" />
+    <AndroidResource Include="Resources\drawable\dialog_disclosure.png" />
+    <AndroidResource Include="Resources\drawable\dialog_expander_ic_minimized.9.png" />
+    <AndroidResource Include="Resources\layout\DashboardView.axml" />
+    <AndroidResource Include="Resources\layout\WelcomeView.axml" />
+    <AndroidResource Include="Resources\layout\GenericDashboardView.axml" />
+    <AndroidResource Include="Resources\drawable\warningicon.png" />
+    <AndroidResource Include="Resources\drawable\Wallpaper.png" />
+    <AndroidResource Include="Resources\layout\dialog_boolfieldleft.xml" />
+    <AndroidResource Include="Resources\layout\dialog_boolfieldright.xml" />
+    <AndroidResource Include="Resources\layout\dialog_boolfieldsubleft.xml" />
+    <AndroidResource Include="Resources\layout\dialog_boolfieldsubright.xml" />
+    <AndroidResource Include="Resources\layout\dialog_button.xml" />
+    <AndroidResource Include="Resources\layout\dialog_datefield.xml" />
+    <AndroidResource Include="Resources\layout\dialog_fieldsetlabel.xml" />
+    <AndroidResource Include="Resources\layout\dialog_floatimage.xml" />
+    <AndroidResource Include="Resources\layout\dialog_labelfieldbelow.xml" />
+    <AndroidResource Include="Resources\layout\dialog_labelfieldright.xml" />
+    <AndroidResource Include="Resources\layout\dialog_onofffieldright.xml" />
+    <AndroidResource Include="Resources\layout\dialog_panel.xml" />
+    <AndroidResource Include="Resources\layout\dialog_root.xml" />
+    <AndroidResource Include="Resources\layout\dialog_selectlist.xml" />
+    <AndroidResource Include="Resources\layout\dialog_selectlistfield.xml" />
+    <AndroidResource Include="Resources\layout\dialog_textarea.xml" />
+    <AndroidResource Include="Resources\layout\dialog_textfieldbelow.xml" />
+    <AndroidResource Include="Resources\layout\dialog_textfieldright.xml" />
+    <AndroidResource Include="Resources\layout\ListItem.axml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\MonoCross\MonoCross.Droid\MonoCross.Droid.csproj">
+      <Project>{B8448676-C9FE-42A3-A30B-F2FFA096E7D9}</Project>
+      <Name>MonoCross.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonoCross\MonoCross.Navigation\MonoCross.Navigation.MD.csproj">
+      <Project>{0D2CC54A-4716-40B9-8110-453F528810FC}</Project>
+      <Name>MonoCross.Navigation.MD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ExampleApp\ExampleApp.MD.csproj">
+      <Project>{2975A76A-BBF1-4979-9AFB-FDFB13FD6589}</Project>
+      <Name>ExampleApp.MD</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MonoCross\Android.Dialog\Android.Dialog.csproj">
+      <Project>{368CF6A6-67D3-47EF-B8E2-D739C406421B}</Project>
+      <Name>Android.Dialog</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidJavaSource Include="SplashScreenActivity.java" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\" />
+  </ItemGroup>
+</Project>
