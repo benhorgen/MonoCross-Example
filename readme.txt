@@ -1,8 +1,11 @@
 
-This repo is available to use as "teaching" project for learning monocross
+This repo is available to use as "teaching" project for learning how to MonoCross
 techniques.  The example app has limited functionality, used to demonstrate 
 one way to structure the navigation and UI code in your MonoCross apps.
 
+This code base include an MonoDroid.Dialog folk.  Using the dialog framework
+a screen in this example app shares abstract UI using the dialog framework's
+Element constructs.  This is rudimentary and needs improved support.
 
 
 "ExampleApp" folder
@@ -18,12 +21,12 @@ ExampleApp.Touch" folder
 Contains the executable for the iOS version of the app
 
 "MonoCross" folder
-Contains as a base the MonoCross micro framework, source version 1.2 and as
-available on google code at this time (5/20/2012).  Some changes made have
-been made to the MonoCross.Droid and MonoCross.Touch source.  This is
-common of MonoCross projects because some (albeit minor) amounts of app
-centric navigation of occurs at that level.  This generally applies to
-apps with a Tab-bar or tablet apps utilizing split screen navigation. For
-a demo explaining the concept, search for the MonoCross_Helpers github
-project and explore that source.
+Contains as its base the MonoCross micro framework, source version 1.2 as
+was available on google code at this time (5/20/2012). Some changes have been
+made to the MonoCross.Droid and MonoCross.Touch source.  This is common of
+projects built on the MonoCross libraries because some (albeit minor) 
+amounts of app centric navigation often occurs at that level.  This generally
+applies to apps with a Tab-bar, or tablet apps utilizing split screen 
+navigation. For a demo explaining that concept, search for the 
+MonoCross_Helpers github project and explore that source.
 
