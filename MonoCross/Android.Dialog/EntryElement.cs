@@ -76,15 +76,15 @@ namespace Android.Dialog
                 _entry.ImeOptions = ImeAction.Unspecified;
 
                 if (this.Password)
-                    _entry.InputType = (int)(InputTypes.ClassText | InputTypes.TextVariationPassword);
+                    _entry.InputType = InputTypes.ClassText | InputTypes.TextVariationPassword;
                 else if (this.Numeric)
-                    _entry.InputType = (int)(InputTypes.ClassNumber | InputTypes.NumberFlagDecimal | InputTypes.NumberFlagSigned);
+                    _entry.InputType = InputTypes.ClassNumber | InputTypes.NumberFlagDecimal | InputTypes.NumberFlagSigned;
                 else
-                    _entry.InputType = (int)InputTypes.ClassText;
+                    _entry.InputType = InputTypes.ClassText;
 
                 if (Lines > 1)
                 {
-                    _entry.InputType |= (int)InputTypes.TextFlagMultiLine;
+                    _entry.InputType |= InputTypes.TextFlagMultiLine;
                     _entry.SetLines(Lines);
                 }
                 else if (Send != null)
