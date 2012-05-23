@@ -21,7 +21,7 @@ namespace ExampleApp.Droid
 			Button b = (Button)FindViewById(Resource.Id.myDeleteButton);
 			b.Click += (sender, e) => 
 			{ 
-				string s = !string.IsNullOrEmpty(s) ? Model.Name : s = "NoData";
+				string s = !string.IsNullOrEmpty(Model.Name) ? Model.Name : s = "NoData";
 				MXDroidContainer.Navigate(this, "WelcomeScreen/Data/" + s); 
 			};
         }
