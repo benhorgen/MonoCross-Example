@@ -1,9 +1,9 @@
 
-This repo is available to use as "teaching" project for learning how to MonoCross
-techniques.  The example app has limited functionality, used to demonstrate 
-one way to structure the navigation and UI code in your MonoCross apps.
+This repo is available to use as a "teaching" project for learning how to utilize 
+MonoCross.  The example app has limited functionality, used to demonstrate 
+one way to structure the navigation and UI code in your MonoCross based apps.
 
-This code base include an MonoDroid.Dialog folk.  Using the dialog framework
+This code base includes an MonoDroid.Dialog fork.  Using the dialog framework
 a screen in this example app shares abstract UI using the dialog framework's
 Element constructs.  This is rudimentary and needs improved support.
 
