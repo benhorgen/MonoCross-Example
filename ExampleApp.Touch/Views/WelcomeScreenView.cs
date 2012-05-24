@@ -38,6 +38,7 @@ namespace ExampleApp.Touch
 				var rect = new RectangleF(loc, size);
 				GlassButton b = new GlassButton(rect);
 				b.SetTitleColor(UIColor.FromRGBA(255, 255, 0, 255), UIControlState.Normal);
+				b.NormalColor = UIColor.FromRGBA(0x62, 0x63, 0x70, 0.85f);
 				b.HorizontalAlignment = UIControlContentHorizontalAlignment.Center;
 				b.SetTitle("Next Screen", UIControlState.Normal);
 				b.TouchUpInside += (o, e) => { MXTouchContainer.Navigate("Dashboard"); };
