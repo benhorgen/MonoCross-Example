@@ -36,7 +36,7 @@ namespace Android.Dialog
         {
             base.OnCreate(savedInstanceState);
 
-            this.ListView.ItemClick += new EventHandler<ItemEventArgs>(ListView_ItemClick);
+            this.ListView.ItemClick += new EventHandler<AdapterView.ItemClickEventArgs>(ListView_ItemClick);
             this.ListView.ItemLongClick +=new EventHandler<AdapterView.ItemLongClickEventArgs>(ListView_ItemLongClick);
                 
             //this.ListView.Tag = Root;
@@ -55,7 +55,7 @@ namespace Android.Dialog
                 elem.LongClick(sender, e);
         }
 
-        void ListView_ItemClick(object sender, ItemEventArgs e)
+        void ListView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
             DialogAdapter dialogAdapter = this.ListAdapter as DialogAdapter;
             Element elem = dialogAdapter.ElementAtIndex(e.Position);
